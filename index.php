@@ -6,7 +6,7 @@
 
 		<script>
 		var temp = localStorage.getItem('playedBefore');
-		if(temp != null || temp != "false")
+		if(temp == true || temp == "true")
 		{
 			window.location.href = "assign.php";
 		}
