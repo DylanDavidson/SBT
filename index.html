@@ -8,7 +8,7 @@
 		var temp = localStorage.getItem('playedBefore');
 		if(temp == true || temp == "true")
 		{
-			window.location.href = "assign.php";
+			window.location.href = "assign.html";
 		}
 
 		</script>
@@ -17,7 +17,7 @@
 	<body style=>
 		<h1 style="background-color:orange">Central Technological University</ht>
 		<h2>Student Login Portal </h2>
-		<form name="submitter" action="s64.php" onsubmit="return(validate());" method="POST">
+		<form name="submitter" action="s64.html" onsubmit="return(validate());" method="GET">
 			Name:
 			<input type="text" name="userName" placeholder="Enter Name" autocomplete="off">
 
@@ -36,7 +36,7 @@
 		</form>
 
 		<script type="text/javascript">
-		
+
 			function validate(){
 				//confirm("Hello "+document.submitter.majors.value);
 				if(document.submitter.userName.value == "" && document.submitter.majors.value == "-1"){
@@ -49,7 +49,7 @@
 				}
 				if(document.submitter.majors.value == "-1"){
 					alert("Please select a major.");
-					return false; 
+					return false;
 				}
 
 			}
