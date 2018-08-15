@@ -1,52 +1,50 @@
+function seller(sellRate){
 
+		this.sellRate = sellRate;
 
-function mine(mineRate){
-
-		this.mineRate = mineRate;
-
-        this.upgrade = function(type, hardware)
+        this.upgrade = function(type, software)
         {   
             switch(type)
             {
                 case(1):
-                    this.mineRate += .005;
-                    return this.getMinerPrice(100, hardware);
+                    this.sellRate += .005;
+                    return this.getSellerPrice(100, software);
                     break;
                 case(2):
-                    this.mineRate += .020;
-                    return this.getMinerPrice(250, hardware);
+                    this.sellRate += .020;
+                    return this.getSellerPrice(250, software);
                     break;
                 case(3):
-                    this.mineRate += .100;
-                    return this.getMinerPrice(1000, hardware);
+                    this.sellRate += .100;
+                    return this.getSellerPrice(1000, software);
                     break;
                 case(4):
-                    this.mineRate += .750;
-                    return this.getMinerPrice(5000, hardware);
+                    this.sellRate += .750;
+                    return this.getSellerPrice(5000, software);
                     break;
                 case(5):
-                    this.mineRate += 4.000;
-                    return this.getMinerPrice(25000, hardware);
+                    this.sellRate += 4.000;
+                    return this.getSellerPrice(25000, software);
                     break;
                 case(6):
-                    this.mineRate += 20.000;
-                    return this.getMinerPrice(100000, hardware);
+                    this.sellRate += 20.000;
+                    return this.getSellerPrice(100000, software);
                     break;
                 case(7):
-                    this.mineRate += 150.000;
-                    return this.getMinerPrice(500000, hardware);
+                    this.sellRate += 150.000;
+                    return this.getSellerPrice(500000, software);
                     break;
                 case(8):
-                    this.mineRate += 1000.000;
-                    return this.getMinerPrice(2500000, hardware);
+                    this.sellRate += 1000.000;
+                    return this.getSellerPrice(2500000, software);
                     break;
                 case(9):
-                    this.mineRate += 5000.000;
-                    return this.getMinerPrice(10000000, hardware);
+                    this.sellRate += 5000.000;
+                    return this.getSellerPrice(10000000, software);
                     break;
                 case(10):
-                    this.mineRate += 100000.000;
-                    return this.getMinerPrice(100000000, hardware);
+                    this.sellRate += 100000.000;
+                    return this.getSellerPrice(100000000, software);
                     break;
                 default:
                     return 0.00;
@@ -54,9 +52,9 @@ function mine(mineRate){
             }
         }
 
-        this.getBasePrice = function(minerID)
+        this.getBasePrice = function(sellerID)
         {
-            switch(minerID)
+            switch(sellerID)
             {
                 case(1):
                     return 100.00;
@@ -93,8 +91,8 @@ function mine(mineRate){
             }
         }
 
-        this.getMinerPrice = function(basePrice, hardware)
+        this.getSellerPrice = function(basePrice, software)
         {
-            return basePrice * (1 - (hardware / 20.0));
+            return basePrice * (1 - (software / 20.0));
         }
 }
